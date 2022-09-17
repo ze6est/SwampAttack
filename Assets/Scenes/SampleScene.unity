@@ -2012,6 +2012,7 @@ MonoBehaviour:
   _weapons:
   - {fileID: 4856136124438970926, guid: 87a667bc233f98640a472a2f1481a9d9, type: 3}
   _shootPoint: {fileID: 1622810429}
+  _canvas: {fileID: 2017413629}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

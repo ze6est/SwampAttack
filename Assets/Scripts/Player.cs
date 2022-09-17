@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private Panel _canvas;
 
     private int _currentHealth;
     private Weapon _currentWeapon;
@@ -19,6 +20,16 @@ public class Player : MonoBehaviour
 
     public int Money { get; private set; }
 
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     private void Start()
     {
         ChangeWeapon(_weapons[_currentWeaponNumber]);
@@ -28,7 +39,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && _canvas.PanelNotOpened)
         {
             _currentWeapon.Shoot(_shootPoint);
         }
